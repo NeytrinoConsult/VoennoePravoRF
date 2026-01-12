@@ -12,7 +12,7 @@ body {
     padding: 0 20px;
 }
 
-/* Хедер */
+/* Хедер с фото строя солдат */
 header {
     position: relative;
     height: 600px;
@@ -25,7 +25,7 @@ header {
 .header-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.5); /* затемнение для читаемости текста */
 }
 
 .header-content {
@@ -50,7 +50,7 @@ header p {
 .cta-btn {
     display: inline-block;
     margin-top: 30px;
-    background: #5c6bc0;
+    background: #5c6bc0; /* мягкий синий */
     color: white;
     padding: 16px 34px;
     border-radius: 8px;
@@ -66,7 +66,7 @@ section {
 }
 
 section.gray {
-    background: #e2e0da;
+    background: #e2e0da; /* мягкий бежевый */
     text-align: center;
 }
 
