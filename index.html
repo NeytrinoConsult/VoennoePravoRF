@@ -9,7 +9,19 @@
 </head>
 <body>
 
-<!-- Хедер с фото строя -->
+<!-- Навигация -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">Военное право</a>
+    <ul class="nav-menu">
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#form">Заявка</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Хедер с фоном солдат -->
 <header>
   <div class="header-overlay">
     <div class="container header-content">
@@ -21,41 +33,53 @@
 </header>
 
 <!-- Блок услуг -->
-<section>
+<section id="services">
 <div class="container">
 <h2>Наши услуги</h2>
 <div class="grid">
 
+<!-- Военное право -->
 <div class="card">
-<img src="/img/military-law.jpg" alt="Военное право">
-<div>
-<b>Военное право</b><br>
-Консультации, обжалование решений, защита прав военнослужащих.
-</div>
+  <a href="military-law.html">
+    <img src="/img/military-law.jpg" alt="Военное право">
+    <div>
+      <b>Военное право</b><br>
+      Консультации, обжалование решений, защита прав военнослужащих.
+    </div>
+  </a>
 </div>
 
+<!-- Выплаты при ранении -->
 <div class="card">
-<img src="/img/medical-help.jpg" alt="Выплаты при ранении">
-<div>
-<b>Выплаты при ранении</b><br>
-Помощь в получении компенсаций, ВВК, страховых выплат.
-</div>
+  <a href="medical-help.html">
+    <img src="/img/medical-help.jpg" alt="Выплаты при ранении">
+    <div>
+      <b>Выплаты при ранении</b><br>
+      Помощь в получении компенсаций, ВВК, страховых выплат.
+    </div>
+  </a>
 </div>
 
+<!-- Контракт и СВО -->
 <div class="card">
-<img src="/img/contract-sign.jpg" alt="Контракт">
-<div>
-<b>Контракт и СВО</b><br>
-Сопровождение при заключении, расторжении контрактов и участии в СВО.
-</div>
+  <a href="contract.html">
+    <img src="/img/contract-sign.jpg" alt="Контракт">
+    <div>
+      <b>Контракт и СВО</b><br>
+      Сопровождение при заключении, расторжении контрактов и участии в СВО.
+    </div>
+  </a>
 </div>
 
+<!-- Социальная поддержка -->
 <div class="card">
-<img src="/img/soldiers-line.jpg" alt="Военнослужащие">
-<div>
-<b>Социальная поддержка</b><br>
-Льготы, ипотека, медицинское обеспечение, статус ветерана.
-</div>
+  <a href="social-support.html">
+    <img src="/img/soldiers-line.jpg" alt="Социальная поддержка">
+    <div>
+      <b>Социальная поддержка</b><br>
+      Льготы, ипотека, медицинское обеспечение, статус ветерана.
+    </div>
+  </a>
 </div>
 
 </div>
@@ -68,26 +92,32 @@
 <h2>Оставить заявку</h2>
 <img src="/img/soldiers-line.jpg" alt="Военнослужащие" style="width:80%; max-width:600px; border-radius:12px; margin-bottom:25px;">
 
+<!-- Форма -->
 <form id="requestForm">
-<input name="name" placeholder="ФИО" required>
-<input name="phone" placeholder="+7 (999) 123-45-67" required>
-<input name="city" placeholder="Город" required>
-<textarea name="comment" placeholder="Комментарий (например, вопрос или запрос)" rows="4"></textarea>
-
-<button type="submit">Отправить заявку</button>
-<p style="font-size:14px">Отправляя заявку, вы соглашаетесь с обработкой персональных данных</p>
+  <!-- ФИО -->
+  <input name="name" placeholder="ФИО" required>
+  <!-- Телефон с примером -->
+  <input name="phone" placeholder="+7 (999) 123-45-67" required>
+  <!-- Город -->
+  <input name="city" placeholder="Город" required>
+  <!-- Комментарий -->
+  <textarea name="comment" placeholder="Комментарий (например, вопрос или запрос)" rows="4"></textarea>
+  <!-- Отправка -->
+  <button type="submit">Отправить заявку</button>
+  <p style="font-size:14px">Отправляя заявку, вы соглашаетесь с обработкой персональных данных</p>
 </form>
 </div>
 </section>
 
-<!-- Модальное окно согласия -->
-<div class="modal" id="consentModal">
-<div class="modal-content">
-<h3>Согласие на обработку персональных данных</h3>
-<p>В соответствии с ФЗ №152 вы даёте согласие на обработку персональных данных для связи с вами.</p>
-<button onclick="acceptConsent()">Согласен</button>
+<!-- Контакты -->
+<section id="contact">
+<div class="container">
+<h2>Контакты</h2>
+<p>Телефон: +7 (999) 123-45-67</p>
+<p>Email: info@example.com</p>
+<p>Адрес офиса: г. Москва, ул. Примерная, д. 1</p>
 </div>
-</div>
+</section>
 
 <script src="js/form.js"></script>
 </body>
