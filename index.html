@@ -12,42 +12,46 @@
 
 <header>
   <div class="container">
-    <h1>Помощь по военному праву<br>и службе по контракту</h1>
-    <p>
-      Консультации, сопровождение, помощь с выплатами,
-      ранениями, контрактами и социальными гарантиями.
-    </p>
+    <h1>Помощь по военному праву и службе по контракту</h1>
+    <p>Консультации, сопровождение, помощь с выплатами, ранениями, контрактами и социальными гарантиями.</p>
     <a href="#form" class="cta-btn">Получить консультацию</a>
   </div>
 </header>
 
 <section>
 <div class="container">
-<h2>Чем мы помогаем</h2>
-
+<h2>Наши услуги</h2>
 <div class="grid">
 
 <div class="card">
-<img src="img/military-law.jpg">
+<img src="img/military-law.jpg" alt="Военное право">
 <div>
 <b>Военное право</b><br>
-Обжалование решений, консультации, защита прав военнослужащих.
+Консультации, обжалование решений, защита прав военнослужащих.
 </div>
 </div>
 
 <div class="card">
-<img src="img/medical-help.jpg">
+<img src="img/medical-help.jpg" alt="Выплаты при ранении">
 <div>
 <b>Выплаты при ранении</b><br>
-Помощь в получении страховых, компенсаций, ВВК.
+Помощь в получении компенсаций, ВВК, страховых выплат.
 </div>
 </div>
 
 <div class="card">
-<img src="img/contract-sign.jpg">
+<img src="img/contract-sign.jpg" alt="Контракт">
 <div>
 <b>Контракт и СВО</b><br>
-Сопровождение при заключении и расторжении контракта.
+Сопровождение при заключении, расторжении контрактов и участии в СВО.
+</div>
+</div>
+
+<div class="card">
+<img src="img/soldiers-line.jpg" alt="Военнослужащие">
+<div>
+<b>Социальная поддержка</b><br>
+Льготы, ипотека, медицинское обеспечение, статус ветерана.
 </div>
 </div>
 
@@ -58,17 +62,16 @@
 <section class="gray">
 <div class="container">
 <h2>Оставить заявку</h2>
+<img src="img/soldiers-line.jpg" alt="Военнослужащие" style="width:80%; max-width:600px; border-radius:12px; margin-bottom:25px;">
 
 <form id="requestForm">
 <input name="name" placeholder="ФИО" required>
-<input name="phone" placeholder="Телефон" required>
+<input name="phone" placeholder="+7 (999) 123-45-67" required>
 <input name="city" placeholder="Город" required>
+<textarea name="comment" placeholder="Комментарий (например, вопрос или запрос)" rows="4"></textarea>
 
 <button type="submit">Отправить заявку</button>
-
-<p style="font-size:14px">
-Отправляя заявку, вы соглашаетесь с обработкой персональных данных
-</p>
+<p style="font-size:14px">Отправляя заявку, вы соглашаетесь с обработкой персональных данных</p>
 </form>
 </div>
 </section>
@@ -76,10 +79,7 @@
 <div class="modal" id="consentModal">
 <div class="modal-content">
 <h3>Согласие на обработку персональных данных</h3>
-<p>
-В соответствии с ФЗ №152 вы даёте согласие
-на обработку персональных данных для связи с вами.
-</p>
+<p>В соответствии с ФЗ №152 вы даёте согласие на обработку персональных данных для связи с вами.</p>
 <button onclick="acceptConsent()">Согласен</button>
 </div>
 </div>
