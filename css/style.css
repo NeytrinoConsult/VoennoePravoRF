@@ -1,3 +1,4 @@
+/* Общие настройки */
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -11,13 +12,28 @@ body {
     padding: 0 20px;
 }
 
+/* Хедер */
 header {
-    background:
-      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url("../img/hero-soldiers.jpg") center/cover no-repeat;
-    color: white;
-    padding: 120px 20px;
+    position: relative;
+    height: 600px;
+    background: url("/img/soldiers-line.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.header-content {
+    position: relative;
     text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 0 20px;
 }
 
 header h1 {
@@ -34,7 +50,7 @@ header p {
 .cta-btn {
     display: inline-block;
     margin-top: 30px;
-    background: #5c6bc0; /* мягкий синий */
+    background: #5c6bc0;
     color: white;
     padding: 16px 34px;
     border-radius: 8px;
@@ -44,20 +60,23 @@ header p {
 }
 .cta-btn:hover { background: #3949ab; }
 
+/* Секции */
 section {
     padding: 80px 0;
 }
 
 section.gray {
-    background: #e2e0da; /* мягкий бежевый */
+    background: #e2e0da;
     text-align: center;
 }
 
+/* Заголовки */
 h2 {
     font-size: 34px;
     margin-bottom: 40px;
 }
 
+/* Карточки услуг */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -87,6 +106,7 @@ h2 {
     font-size: 16px;
 }
 
+/* Форма */
 form {
     max-width: 520px;
     margin: auto;
@@ -115,6 +135,7 @@ button {
 }
 button:hover { background: #3949ab; }
 
+/* Модальное окно согласия */
 .modal {
     position: fixed;
     inset: 0;
