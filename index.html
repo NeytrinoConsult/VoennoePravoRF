@@ -5,6 +5,12 @@
   <title>Военное право и служба по контракту</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Юридическая помощь военнослужащим. Контракт, выплаты, ранения, СВО.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -38,10 +44,9 @@
 <h2>Наши услуги</h2>
 <div class="grid">
 
-<!-- Военное право -->
 <div class="card">
   <a href="military-law.html">
-    <img src="/img/military-law.jpg" alt="Военное право">
+    <img src="img/military-law.jpg" alt="Военное право">
     <div>
       <b>Военное право</b><br>
       Консультации, обжалование решений, защита прав военнослужащих.
@@ -49,10 +54,9 @@
   </a>
 </div>
 
-<!-- Выплаты при ранении -->
 <div class="card">
   <a href="medical-help.html">
-    <img src="/img/medical-help.jpg" alt="Выплаты при ранении">
+    <img src="img/medical-help.jpg" alt="Выплаты при ранении">
     <div>
       <b>Выплаты при ранении</b><br>
       Помощь в получении компенсаций, ВВК, страховых выплат.
@@ -60,10 +64,9 @@
   </a>
 </div>
 
-<!-- Контракт и СВО -->
 <div class="card">
   <a href="contract.html">
-    <img src="/img/contract-sign.jpg" alt="Контракт">
+    <img src="img/contract-sign.jpg" alt="Контракт">
     <div>
       <b>Контракт и СВО</b><br>
       Сопровождение при заключении, расторжении контрактов и участии в СВО.
@@ -71,10 +74,9 @@
   </a>
 </div>
 
-<!-- Социальная поддержка -->
 <div class="card">
   <a href="social-support.html">
-    <img src="/img/soldiers-line.jpg" alt="Социальная поддержка">
+    <img src="img/soldiers-line.jpg" alt="Социальная поддержка">
     <div>
       <b>Социальная поддержка</b><br>
       Льготы, ипотека, медицинское обеспечение, статус ветерана.
@@ -90,19 +92,12 @@
 <section class="gray" id="form">
 <div class="container">
 <h2>Оставить заявку</h2>
-<img src="/img/soldiers-line.jpg" alt="Военнослужащие" style="width:80%; max-width:600px; border-radius:12px; margin-bottom:25px;">
-
-<!-- Форма -->
+<img src="img/soldiers-line.jpg" alt="Военнослужащие" style="width:80%; max-width:600px; border-radius:12px; margin-bottom:25px;">
 <form id="requestForm">
-  <!-- ФИО -->
   <input name="name" placeholder="ФИО" required>
-  <!-- Телефон с примером -->
   <input name="phone" placeholder="+7 (999) 123-45-67" required>
-  <!-- Город -->
   <input name="city" placeholder="Город" required>
-  <!-- Комментарий -->
   <textarea name="comment" placeholder="Комментарий (например, вопрос или запрос)" rows="4"></textarea>
-  <!-- Отправка -->
   <button type="submit">Отправить заявку</button>
   <p style="font-size:14px">Отправляя заявку, вы соглашаетесь с обработкой персональных данных</p>
 </form>
