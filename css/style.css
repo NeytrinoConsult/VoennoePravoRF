@@ -1,15 +1,8 @@
-/* Общие настройки */
 body {
     margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f4f3f0;
+    font-family: 'Montserrat', sans-serif;
+    background: #f9f8f5;
     color: #1f2937;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
 }
 
 /* Навигация */
@@ -17,11 +10,13 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     z-index: 999;
-    font-weight: bold;
+    font-weight: 500;
+    transition: background 0.3s;
 }
+.navbar:hover { background: rgba(255,255,255,1); }
 
 .nav-container {
     display: flex;
@@ -33,7 +28,7 @@ body {
 .navbar .logo {
     text-decoration: none;
     color: #1f2937;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .nav-menu {
@@ -49,42 +44,24 @@ body {
     color: #1f2937;
     transition: color 0.3s;
 }
+.nav-menu li a:hover { color: #5c6bc0; }
 
-.nav-menu li a:hover {
-    color: #5c6bc0;
-}
-
-/* Адаптивное меню для мобильных */
-@media(max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .nav-menu {
-        flex-direction: column;
-        width: 100%;
-        display: none; /* скрыто по умолчанию */
-    }
-    .nav-menu.active {
-        display: flex;
-    }
-}
-
-/* Хедер с фото строя солдат */
+/* Хедер с фоном солдат */
 header {
     position: relative;
     height: 600px;
-    background: url("/img/soldiers-line.jpg") center/cover no-repeat;
+    background: url("img/soldiers-line.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 60px; /* чтобы не перекрывало меню */
+    margin-top: 60px;
+    border-bottom: 4px solid #5c6bc0;
 }
 
 .header-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.45);
 }
 
 .header-content {
@@ -95,8 +72,8 @@ header {
     padding: 0 20px;
 }
 
-header h1 { font-size: 44px; margin-bottom: 20px; }
-header p { font-size: 20px; max-width: 700px; margin: auto; }
+header h1 { font-size: 46px; font-weight: 700; margin-bottom: 20px; }
+header p { font-size: 22px; max-width: 700px; margin: auto; }
 
 .cta-btn {
     display: inline-block;
@@ -104,19 +81,23 @@ header p { font-size: 20px; max-width: 700px; margin: auto; }
     background: #5c6bc0;
     color: white;
     padding: 16px 34px;
-    border-radius: 8px;
-    font-weight: bold;
+    border-radius: 10px;
+    font-weight: 600;
     text-decoration: none;
-    transition: background 0.3s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: all 0.3s;
 }
-.cta-btn:hover { background: #3949ab; }
+.cta-btn:hover {
+    background: #3949ab;
+    transform: translateY(-2px);
+}
 
 /* Секции */
-section { padding: 80px 0; }
-section.gray { background: #e2e0da; text-align: center; }
+section { padding: 80px 20px; }
+section.gray { background: #e2e0da; text-align: center; border-radius: 12px; }
 
 /* Заголовки */
-h2 { font-size: 34px; margin-bottom: 40px; }
+h2 { font-size: 36px; margin-bottom: 40px; color: #333; }
 
 /* Карточки услуг */
 .grid {
@@ -128,17 +109,20 @@ h2 { font-size: 34px; margin-bottom: 40px; }
 
 .card {
     background: white;
-    border-radius: 14px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     width: 100%;
     max-width: 320px;
-    transition: transform 0.3s;
+    transition: transform 0.4s, box-shadow 0.4s;
 }
-.card:hover { transform: translateY(-5px); }
+.card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
 
 .card img { width: 100%; height: 180px; object-fit: cover; }
-.card div { padding: 25px; font-size: 16px; }
+.card div { padding: 25px; font-size: 16px; line-height: 1.5; }
 
 /* Форма */
 form { max-width: 520px; margin: auto; }
@@ -146,9 +130,10 @@ input, textarea, button {
     width: 100%;
     padding: 15px;
     margin-bottom: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     border: 1px solid #cfd8dc;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
 }
 input::placeholder, textarea::placeholder { color: #9e9e9e; }
 button {
@@ -157,9 +142,12 @@ button {
     border: none;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
-button:hover { background: #3949ab; }
+button:hover { 
+    background: #3949ab; 
+    transform: translateY(-2px);
+}
 
 /* Модальное окно согласия */
 .modal {
@@ -175,6 +163,7 @@ button:hover { background: #3949ab; }
     background: white;
     max-width: 600px;
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 16px;
     text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
