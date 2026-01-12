@@ -12,6 +12,64 @@ body {
     padding: 0 20px;
 }
 
+/* Навигация */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+    font-weight: bold;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.navbar .logo {
+    text-decoration: none;
+    color: #1f2937;
+    font-size: 22px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #1f2937;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #5c6bc0;
+}
+
+/* Адаптивное меню для мобильных */
+@media(max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* скрыто по умолчанию */
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
 /* Хедер с фото строя солдат */
 header {
     position: relative;
@@ -20,6 +78,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 60px; /* чтобы не перекрывало меню */
 }
 
 .header-overlay {
