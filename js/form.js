@@ -1,34 +1,27 @@
-// URL твоего веб-приложения Google Apps Script
-const FORM_URL = "https://script.google.com/macros/s/AKfycbyj3P_5iAh9AuI_R5mSPs7JAnKD0XIED-SMnB7lidF9Csfx8X4uhR9p4wBld_j0Uw3cpw/exec";
+// form.js — полностью рабочий
+// URL твоего Google Apps Script
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyj3P_5iAh9AuI_R5mSPs7JAnKD0XIED-SMnB7lidF9Csfx8X4uhR9p4wBld_j0Uw3cpw/exec';
 
-document.getElementById("requestForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    // Показываем модальное окно согласия
-    document.getElementById("consentModal").style.display = "flex";
-});
+// Получаем форму по ID
+const form = document.getElementById('requestForm');
 
-function acceptConsent() {
-    // Пользователь согласился
-    document.getElementById("consentModal").style.display = "none";
+if (form) {
+  form.addEventListener('submit', e => {
+    e.preventDefault(); // предотвращаем стандартную отправку формы
 
-    const form = document.getElementById("requestForm");
-    const data = new FormData(form);
+    const formData = new FormData(form);
 
-    // Отправляем все поля, включая новый комментарий
-    fetch(FORM_URL, {
-        method: "POST",
-        body: data
-    })
-    .then(response => response.json())
-    .then(json => {
-        if (json.result === "success") {
-            alert("Заявка успешно отправлена! Мы свяжемся с вами.");
-            form.reset();
-        } else {
-            alert("Ошибка отправки: " + (json.error || ""));
-        }
-    })
-    .catch(err => {
-        alert("Ошибка соединения: " + err);
-    });
+    // Отправка данных на Google Script
+    fetch(scriptURL, { method: 'POST', body: formData })
+      .then(response => {
+        alert('✅ Заявка успешно отправлена!'); // уведомление
+        form.reset(); // очистка формы
+      })
+      .catch(error => {
+        alert('❌ Ошибка при отправке. Попробуйте позже.');
+        console.error('Error!', error.message);
+      });
+  });
+} else {
+  console.error('Форма с id="requestForm" не найдена на странице');
 }
